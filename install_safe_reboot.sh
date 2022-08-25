@@ -86,13 +86,13 @@ Install() {
         mv reboot.sh $install_path
     fi
     echo "[-] 设定环境变量中....."
-    if [ -d "/home" ];then
+    if [ -d "/root" ];then
         sed -i '$a alias sudo=\"sudo \"' /root/.bashrc
         sed -i '$a alias reboot=\"bash /usr/share/reboot.sh\"' /root/.bashrc
     else
         echo_yellow "[!] 未检测到 /home 目录,跳过设置普通用户的环境变量"
     fi
-    if [ -d "/root" ];then
+    if [ -d "/home" ];then
         sed -i '$a alias sudo=\"sudo \"' /home/*/.bashrc
         sed -i '$a alias reboot=\"bash /usr/share/reboot.sh\"' /home/*/.bashrc
     else
