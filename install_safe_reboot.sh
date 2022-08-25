@@ -90,15 +90,15 @@ Install() {
         sed -i '$a alias sudo=\"sudo \"' /root/.bashrc
         sed -i '$a alias reboot=\"bash /usr/share/reboot.sh\"' /root/.bashrc
     else
-        echo_yellow "[!] 未检测到 /home 目录,跳过设置普通用户的环境变量"
+        Clean
+        rm -rf /usr/share/reboot.sh
+        Error "[x] 未检测到 /root 目录,无法继续运行安装"
     fi
     if [ -d "/home" ];then
         sed -i '$a alias sudo=\"sudo \"' /home/*/.bashrc
         sed -i '$a alias reboot=\"bash /usr/share/reboot.sh\"' /home/*/.bashrc
     else
-        Clean
-        rm -rf /usr/share/reboot.sh
-        Error "[x] 未检测到 /root 目录,无法继续运行安装"
+        echo_yellow "[!] 未检测到 /home 目录,跳过设置普通用户的环境变量"
     fi
     echo "[-] 清理残余文件中....."
     Clean
