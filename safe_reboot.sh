@@ -21,7 +21,7 @@ if [ "$yes" != "yes" ];then
 fi
 
 if [ "$yes" == "yes" ];then
-  	echo "[√] 已计划在 5s 后进行重启"
-    shutdown -r 5
+  	echo "[√] 已重启"
+    reboot
   	exit;
 fi
