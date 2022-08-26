@@ -94,7 +94,7 @@ Install() {
         rm -rf /usr/share/reboot.sh
         Error "[x] 未检测到 /root 目录,无法继续运行安装"
     fi
-    if [ -d "/home/*" ];then
+    if [ -d "/home/" ];then
         sed -i '$a alias sudo=\"sudo \"' /home/*/.bashrc
         sed -i '$a alias reboot=\"bash /usr/share/reboot.sh\"' /home/*/.bashrc
     else
