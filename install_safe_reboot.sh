@@ -1,6 +1,6 @@
 #!/bin/bash
 ### 一键安装安全重启脚本
-### Made By MainTest233
+### Made By BlueFunny_
 
 ## 红色报错函数
 Error() {
