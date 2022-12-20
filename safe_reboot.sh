@@ -1,6 +1,6 @@
 #!/bin/bash
-# 安全重启脚本
-# Made By MainTest233
+#### 安全重启脚本
+#### Made By BlueFunny_
 
 Error() {
   echo '================================================='
